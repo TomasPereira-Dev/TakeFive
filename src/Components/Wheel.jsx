@@ -67,21 +67,69 @@ const Wheel = () =>{
                     </div>
                 </div>
             </div>
-            {//<div className={wheelStyles.minorKeys}>
-             //   <div className={wheelStyles.aMinor}><p>Am</p></div>
-             //   <div className={wheelStyles.eMinor}><p>Em</p></div>
-             //   <div className={wheelStyles.bMinor}><p>Bm</p></div>
-             //   <div className={wheelStyles.fSharpMinor}><p>F#m</p></div>
-             //   <div className={wheelStyles.cSharpMinor}><p>C#m</p></div>
-             //   <div className={wheelStyles.gSharpMinor}><p>G#m/Ab#</p></div>
-             //   <div className={wheelStyles.dSharpMinor}><p>D#m/Ebm</p></div>
-             //   <div className={wheelStyles.aSharpMinor}><p>A#m/Bbm</p></div>
-             //   <div className={wheelStyles.fMinor}><p>Fm</p></div>
-             //   <div className={wheelStyles.cMinor}><p>Cm</p></div>
-             //   <div className={wheelStyles.gMinor}><p>Gm</p></div>
-             //   <div className={wheelStyles.dMinor}><p>Dm</p></div>
-             //</div>
-            }
+            <div className={wheelStyles.minorKeys}>
+                <div className={`${wheelStyles.aMinor} ${wheelStyles.note}`}>
+                    <div className={wheelStyles.noteText}>
+                        <p>Am</p>
+                    </div>
+                </div>
+                <div className={`${wheelStyles.eMinor} ${wheelStyles.note}`}>
+                    <div className={wheelStyles.noteText}>
+                        <p>Em</p>
+                    </div>
+                </div>
+                <div className={`${wheelStyles.bMinor} ${wheelStyles.note}`}>
+                    <div className={wheelStyles.noteText}>
+                        <p>Bm</p>
+                    </div>
+                </div>
+                <div className={`${wheelStyles.fSharpMinor} ${wheelStyles.note}`}>
+                    <div className={wheelStyles.noteText}>
+                        <p>F#m</p>
+                    </div>
+                </div>
+                <div className={`${wheelStyles.cSharpMinor} ${wheelStyles.note}`}>
+                    <div className={wheelStyles.noteText}>
+                        <p>C#m</p>
+                    </div>
+                </div>
+                <div className={`${wheelStyles.aFlatMinor} ${wheelStyles.note}`}>
+                    <div className={wheelStyles.noteText}>
+                        <p>Abm</p>
+                    </div>
+                </div>
+                <div className={`${wheelStyles.eFlatMinor} ${wheelStyles.note}`}>
+                    <div className={wheelStyles.noteText}>
+                        <p>Ebm</p>
+                    </div>
+                </div>
+                <div className={`${wheelStyles.bFlatMinor} ${wheelStyles.note}`}>
+                    <div className={wheelStyles.noteText}>
+                        <p>Bbm</p>
+                    </div>
+                </div>
+                <div className={`${wheelStyles.fMinor} ${wheelStyles.note}`}>
+                    <div className={wheelStyles.noteText}>
+                        <p>Fm</p>
+                    </div>
+                </div>
+                <div className={`${wheelStyles.cMinor} ${wheelStyles.note}`}>
+                    <div className={wheelStyles.noteText}>
+                        <p>Cm</p>
+                    </div>
+                </div>
+                <div className={`${wheelStyles.gMinor} ${wheelStyles.note}`}>
+                    <div className={wheelStyles.noteText}>
+                        <p>Gm</p>
+                    </div>
+                </div>
+                <div className={`${wheelStyles.dMinor} ${wheelStyles.note}`}>
+                    <div className={wheelStyles.noteText}>
+                        <p>Dm</p>
+                    </div>
+                </div>
+             </div>
+            
         </div>
         <button>SPIN!</button>
     </>
