@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Jost", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
 }
 
 html, body{
@@ -75,11 +78,11 @@ html, body{
     left: -100%;
     text-align: center;
     padding: 1em;
-    background-color: blueviolet;
     width: 200%;
     height: 200%;
     transform: skewY(60deg) rotate(15deg); 
 }
+
 
 .majorKeys .note:nth-child(2){
     transform: rotate(30deg) skewY(-60deg); 
@@ -130,51 +133,51 @@ html, body{
 /*colors for every note in the mayor circle*/
 
 .majorKeys .note:first-child .noteText{
-    background: linear-gradient(180deg, rgba(252,230,31,1) 0%, rgba(255,255,255,1) 46%);
+    background-color: #BEE3DB;
 }
 
 .majorKeys .note:nth-child(2) .noteText{
-    background-color: #CB7727;
+    background-color: #89B0AE;
 }
 
 .majorKeys .note:nth-child(3) .noteText{
-    background-color: #FFD700;
+    background-color: #BEE3DB;
 }
 
 .majorKeys .note:nth-child(4) .noteText{
-    background-color: #FBED4E;
+    background-color: #89B0AE;
 }
 
 .majorKeys .note:nth-child(5) .noteText{
-    background-color: #FDD42B;
+    background-color: #BEE3DB;
 }
 
 .majorKeys .note:nth-child(6) .noteText{
-    background-color: #F4212A;
+    background-color: #89B0AE;
 }
 
 .majorKeys .note:nth-child(7) .noteText{
-    background-color: #81B344;
+    background-color: #BEE3DB;
 }
 
 .majorKeys .note:nth-child(8) .noteText{
-    background-color: #00008b;
+    background-color: #89B0AE;
 }
 
 .majorKeys .note:nth-child(9) .noteText{
-    background-color: #000000;
+    background-color: #BEE3DB;
 }
 
 .majorKeys .note:nth-child(10) .noteText{
-    background-color: #932a8f;
+    background-color: #89B0AE;
 }
 
 .majorKeys .note:nth-child(11) .noteText{
-    background-color: #f5ea36;
+    background-color: #BEE3DB;
 }
 
 .majorKeys .note:nth-child(12) .noteText{
-    background-color: #E71C22;
+    background-color: #89B0AE;
 }
 
 /*angle rotations for every note in the minor circle*/
@@ -241,49 +244,49 @@ html, body{
 
 /*colors for every note in the minor circle*/
 .minorKeys .note:first-child .noteText{
-    background: linear-gradient(180deg, rgba(252,230,31,1) 0%, rgba(255,255,255,1) 46%);
+    background-color: #D6EDE8;
 }
 
 .minorKeys .note:nth-child(2) .noteText{
-    background-color: #CB7727;
+    background-color: #BBD2D0;
 }
 
 .minorKeys .note:nth-child(3) .noteText{
-    background-color: #FFD700;
+    background-color: #D6EDE8;
 }
 
 .minorKeys .note:nth-child(4) .noteText{
-    background-color: #FBED4E;
+    background-color: #BBD2D0;
 }
 
 .minorKeys .note:nth-child(5) .noteText{
-    background-color: #FDD42B;
+    background-color: #D6EDE8;
 }
 
 .minorKeys .note:nth-child(6) .noteText{
-    background-color: #F4212A;
+    background-color: #BBD2D0;
 }
 
 .minorKeys .note:nth-child(7) .noteText{
-    background-color: #81B344;
+    background-color: #D6EDE8;
 }
 
 .minorKeys .note:nth-child(8) .noteText{
-    background-color: #00008b;
+    background-color: #BBD2D0;
 }
 
 .minorKeys .note:nth-child(9) .noteText{
-    background-color: #000000;
+    background-color: #D6EDE8;
 }
 
 .minorKeys .note:nth-child(10) .noteText{
-    background-color: #932a8f;
+    background-color: #BBD2D0;
 }
 
 .minorKeys .note:nth-child(11) .noteText{
-    background-color: #f5ea36;
+    background-color: #D6EDE8;
 }
 
 .minorKeys .note:nth-child(12) .noteText{
-    background-color: #E71C22;
+    background-color: #BBD2D0;
 }

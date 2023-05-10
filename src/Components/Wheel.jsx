@@ -128,7 +128,7 @@ const Wheel = () =>{
                         <p>Dm</p>
                     </div>
                 </div>
-             </div>
+            </div>
             
         </div>
         <button>SPIN!</button>
