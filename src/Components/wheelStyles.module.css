@@ -16,6 +16,12 @@ html, body{
 }
 
 
+.wheelWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .wheelContainer{
     position: relative;
     display: flex;
@@ -23,6 +29,7 @@ html, body{
     align-items: center;
     justify-content: center;
     transform: rotate(345deg);
+    transition: transform 0.8s ease ;
 }
 
 .majorKeys{

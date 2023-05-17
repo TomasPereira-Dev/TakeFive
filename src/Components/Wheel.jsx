@@ -1,10 +1,77 @@
+import { useRef, useState } from "react";
 import wheelStyles from "./wheelStyles.module.css";
+import SongsExamples from "./SongsExamples";
 
 const Wheel = () =>{
 
+    const wheelRef = useRef(null);
+    const [wheelKey, setWheelKey] = useState("C");
+
+    const notes = [
+        {
+            note: "F",
+            angle: 15
+        },
+        {
+            note: "C",
+            angle: 345
+        },
+        {
+            note: "G",
+            angle: 315
+        },
+        {
+            note: "D",
+            angle: 285
+        },
+        {
+            note: "A",
+            angle: 255
+        },
+        {
+            note: "E",
+            angle: 225
+        },
+        {
+            note: "B",
+            angle: 195
+        },
+        {
+            note: "Gb",
+            angle: 165
+        },
+        {
+            note: "Db",
+            angle: 135
+        },
+        {
+            note: "Ab",
+            angle: 105
+        },
+        {
+            note: "Eb",
+            angle: 75
+        },
+        {
+            note: "Bb",
+            angle: 45
+        }
+    ]
+
+    const spinButtonHandler = () => {
+        const angleToRotate = Math.floor(Math.random() * 11);
+        wheelRef.current.style.transform = `rotate(${notes[angleToRotate].angle}deg)`;
+        setWheelKey(notes[angleToRotate].note);
+        console.log(notes[angleToRotate].angle, notes[angleToRotate].note)
+    }
+
+    console.log(wheelKey, "wheelkey state")
+
+
     return(
     <>
-        <div className={wheelStyles.wheelContainer}>
+        <div className={wheelStyles.wheelWrapper}>
+        <div className={wheelStyles.wheelContainer} ref={wheelRef}>
             <div className={wheelStyles.majorKeys}>
                 <div className={`${wheelStyles.cMajor} ${wheelStyles.note}`}>
                     <div className={wheelStyles.noteText}>
@@ -129,9 +196,10 @@ const Wheel = () =>{
                     </div>
                 </div>
             </div>
-            
         </div>
-        <button>SPIN!</button>
+        <button onClick={spinButtonHandler}>SPIN!</button>
+        </div>
+        <SongsExamples wheelKey={wheelKey}/>
     </>
     )
 };
