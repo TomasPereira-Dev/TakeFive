@@ -1,5 +1,6 @@
 import { Spotify } from "react-spotify-embed";
 import songsExamplesStyles from "./songsExamplesStyles.module.css";
+import wheelStyles from "./wheelStyles.module.css";
 
 const SongsExamples = ({wheelKey}) => {
     const keyExamples = [
@@ -71,9 +72,20 @@ const SongsExamples = ({wheelKey}) => {
         if(wheelKey == keyExamples[i].key){
             return(
                 <>
-                    <Spotify wide link={keyExamples[i].examples[0]}/>
-                    <Spotify wide link={keyExamples[i].examples[1]}/>
-                    <Spotify wide link={keyExamples[i].examples[2]}/>
+                    <div className={songsExamplesStyles.songList}>
+                        <h2>Songs in this key</h2>
+                        <Spotify wide link={keyExamples[i].examples[0]}/>
+                        <Spotify wide link={keyExamples[i].examples[1]}/>
+                        <Spotify wide link={keyExamples[i].examples[2]}/>
+                        <div className={wheelStyles.chordProgList}>
+                            <h2>Chord progression examples</h2>
+                            <p>I-V-vi-IV</p>
+                            <p>I-IV-V</p>
+                            <p>ii-V-I</p>
+                            <p>I-vi-IV-V</p>
+                        </div>
+                    </div>
+
                 </>
 
             )
