@@ -201,7 +201,7 @@ const Wheel = () =>{
                         </div>
                     </div>
             </div>
-                <button onClick={spinButtonHandler}>SPIN!</button>
+                <button onClick={spinButtonHandler} className={wheelStyles.wheelBtn}>Give me a key!</button>
             </div>
             <SongsExamples wheelKey={wheelKey}/>
         </div>

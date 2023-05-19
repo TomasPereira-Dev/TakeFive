@@ -1,6 +1,6 @@
 import { Spotify } from "react-spotify-embed";
 import songsExamplesStyles from "./songsExamplesStyles.module.css";
-import wheelStyles from "./wheelStyles.module.css";
+import { useEffect } from "react";
 
 const SongsExamples = ({wheelKey}) => {
     const keyExamples = [
@@ -66,6 +66,7 @@ const SongsExamples = ({wheelKey}) => {
             "https://open.spotify.com/track/6wVViUl2xSRoDK2T7dMZbR"
         ]}
     ];
+
     
     for(let i = 0; i < keyExamples.length; i++){
         console.log("loop: ", wheelKey, keyExamples[i].key)
@@ -77,15 +78,30 @@ const SongsExamples = ({wheelKey}) => {
                         <Spotify wide link={keyExamples[i].examples[0]}/>
                         <Spotify wide link={keyExamples[i].examples[1]}/>
                         <Spotify wide link={keyExamples[i].examples[2]}/>
-                        <div className={wheelStyles.chordProgList}>
-                            <h2>Chord progression examples</h2>
-                            <p>I-V-vi-IV</p>
-                            <p>I-IV-V</p>
-                            <p>ii-V-I</p>
-                            <p>I-vi-IV-V</p>
+                        <div className={songsExamplesStyles.chordProgContainer}>
+                            <h2>Chord progressions examples</h2>
+                            <div className={songsExamplesStyles.chordProgList}>
+                                <div className={songsExamplesStyles.chordProg}>
+                                    <p>I-V-vi-IV</p>
+                                </div>
+                                <div className={songsExamplesStyles.chordProg}>
+                                    <p>I-IV-V</p>
+                                </div>
+                                <div className={songsExamplesStyles.chordProg}>
+                                    <p>ii-V-I</p>
+                                </div>
+                                <div className={songsExamplesStyles.chordProg}> 
+                                    <p>I-vi-IV-V</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <div className={songsExamplesStyles.chordDiagramsContainer}>
+                        <h2>Guitar chords in this key</h2>
+                        <div className={songsExamplesStyles.chordDiagramsList}>
 
+                        </div>
+                    </div>
                 </>
 
             )

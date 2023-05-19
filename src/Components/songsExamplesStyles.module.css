@@ -5,3 +5,17 @@
     gap: .5em;
     margin: 1em;
 }
+
+.chordProgList{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.chordProg{
+    background-color: #80A5A3;
+    text-align: center;
+    padding: 1em;
+    border-radius: 1em;
+}

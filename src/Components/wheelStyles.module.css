@@ -9,6 +9,12 @@
 
 html, body{
     width: 100%;
+    height: 100%;
+}
+
+#root{
+    width: 100%;
+    height: 100%;
 }
 
 .mainContainer{
@@ -22,7 +28,7 @@ html, body{
 .wheelWrapper{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
     
 }
 .arrowContainer{
@@ -43,13 +49,13 @@ html, body{
     align-items: center;
     justify-content: center;
     transform: rotate(345deg);
-    transition: transform 0.8s ease ;
+    transition: transform 0.8s ease;
 }
 
 .majorKeys{
     position: relative;
-    width: 400px;
-    height: 400px;
+    width: 600px;
+    height: 600px;
     font-size: 1em;
     overflow: hidden;
     border-radius: 50%;
@@ -68,8 +74,8 @@ html, body{
 
 .minorKeys{
     position: absolute;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     font-size: 1em;
     overflow: hidden;
     border-radius: 50%;
@@ -87,6 +93,15 @@ html, body{
     overflow: hidden;
 }
 
+.wheelBtn{
+    border: none;
+    border-bottom: 5px solid black;
+    border-radius: 25px;
+
+    padding: 16px;
+    width: fit-content;
+    background-color: #89B0AE;
+}
 
 
 /*angle rotations for every note in the mayor circle*/
