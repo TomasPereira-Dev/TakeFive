@@ -10,51 +10,63 @@ const Wheel = () =>{
     const notes = [
         {
             note: "F",
-            angle: 15
+            angle: 15,
+            notesInThisKey: ["Bb", "F", "C", "G", "D", "A", "E"]
         },
         {
             note: "C",
-            angle: 345
+            angle: 345,
+            notesInThisKey: ["F", "C", "G", "D", "A", "E", "B"]
         },
         {
             note: "G",
-            angle: 315
+            angle: 315,
+            notesInThisKey: ["C", "G", "D", "A", "E", "B", "F#"]
         },
         {
             note: "D",
-            angle: 285
+            angle: 285,
+            notesInThisKey: ["G", "D", "A", "E", "B", "F#", "C#"]
         },
         {
             note: "A",
-            angle: 255
+            angle: 255,
+            notesInThisKey: ["D", "A", "E", "B", "F#", "C#", "Ab"]
         },
         {
             note: "E",
-            angle: 225
+            angle: 225,
+            notesInThisKey: ["A", "E", "B", "F#", "C#", "Ab", "Eb"]
         },
         {
             note: "B",
-            angle: 195
+            angle: 195,
+            notesInThisKey: ["E", "B", "F#", "C#", "Ab", "Eb", "Bb"]
         },
         {
-            note: "Gb",
-            angle: 165
+            note: "F#",
+            angle: 165,
+            notesInThisKey: ["B", "F#", "C#", "Ab", "Eb", "Bb", "F"]
         },
         {
-            note: "Db",
-            angle: 135
+            note: "C#",
+            angle: 135,
+            notesInThisKey: ["F#", "C#", "Ab", "Eb", "Bb", "F", "C"]
         },
         {
             note: "Ab",
-            angle: 105
+            angle: 105,
+            notesInThisKey: ["F#", "Ab", "Eb", "Bb", "F", "C", "G"]
         },
         {
             note: "Eb",
-            angle: 75
+            angle: 75,
+            notesInThisKey: ["Ab", "Eb", "Bb", "F", "C", "G", "D"]
         },
         {
             note: "Bb",
-            angle: 45
+            angle: 45,
+            notesInThisKey: ["Eb", "Bb", "F", "C", "G", "D", "A"]
         }
     ]
 
@@ -62,11 +74,7 @@ const Wheel = () =>{
         const angleToRotate = Math.floor(Math.random() * 11);
         wheelRef.current.style.transform = `rotate(${notes[angleToRotate].angle}deg)`;
         setWheelKey(notes[angleToRotate].note);
-        console.log(notes[angleToRotate].angle, notes[angleToRotate].note)
     }
-
-    console.log(wheelKey, "wheelkey state")
-
 
     return(
     <>
@@ -203,7 +211,7 @@ const Wheel = () =>{
             </div>
                 <button onClick={spinButtonHandler} className={wheelStyles.wheelBtn}>Give me a key!</button>
             </div>
-            <SongsExamples wheelKey={wheelKey}/>
+            <SongsExamples wheelKey={wheelKey} notes={notes}/>
         </div>
 
     </>
