@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import wheelStyles from "./wheelStyles.module.css";
 import SongsExamples from "./SongsExamples";
+import ChordDiagrams from "./ChordDiagrams";
 
 const Wheel = () =>{
 
@@ -21,42 +22,42 @@ const Wheel = () =>{
         {
             note: "G",
             angle: 315,
-            notesInThisKey: ["C", "G", "D", "A", "E", "B", "F#"]
+            notesInThisKey: ["C", "G", "D", "A", "E", "B", "Gb"]
         },
         {
             note: "D",
             angle: 285,
-            notesInThisKey: ["G", "D", "A", "E", "B", "F#", "C#"]
+            notesInThisKey: ["G", "D", "A", "E", "B", "Gb", "Db"]
         },
         {
             note: "A",
             angle: 255,
-            notesInThisKey: ["D", "A", "E", "B", "F#", "C#", "Ab"]
+            notesInThisKey: ["D", "A", "E", "B", "Gb", "Db", "Ab"]
         },
         {
             note: "E",
             angle: 225,
-            notesInThisKey: ["A", "E", "B", "F#", "C#", "Ab", "Eb"]
+            notesInThisKey: ["A", "E", "B", "Gb", "Db", "Ab", "Eb"]
         },
         {
             note: "B",
             angle: 195,
-            notesInThisKey: ["E", "B", "F#", "C#", "Ab", "Eb", "Bb"]
+            notesInThisKey: ["E", "B", "Gb", "Db", "Ab", "Eb", "Bb"]
         },
         {
-            note: "F#",
+            note: "Gb",
             angle: 165,
-            notesInThisKey: ["B", "F#", "C#", "Ab", "Eb", "Bb", "F"]
+            notesInThisKey: ["B", "Gb", "Db", "Ab", "Eb", "Bb", "F"]
         },
         {
-            note: "C#",
+            note: "Db",
             angle: 135,
-            notesInThisKey: ["F#", "C#", "Ab", "Eb", "Bb", "F", "C"]
+            notesInThisKey: ["Gb", "Db", "Ab", "Eb", "Bb", "F", "C"]
         },
         {
             note: "Ab",
             angle: 105,
-            notesInThisKey: ["F#", "Ab", "Eb", "Bb", "F", "C", "G"]
+            notesInThisKey: ["Db", "Ab", "Eb", "Bb", "F", "C", "G"]
         },
         {
             note: "Eb",
@@ -117,7 +118,7 @@ const Wheel = () =>{
                         </div>
                         <div className={`${wheelStyles.fSharpMajor}  ${wheelStyles.note}`}>
                             <div className={wheelStyles.noteText}>
-                                <p>F#/Gb</p>
+                                <p>Gb/F#</p>
                             </div>
                         </div>
                         <div className={`${wheelStyles.cSharpMajor}  ${wheelStyles.note}`}>
@@ -212,8 +213,8 @@ const Wheel = () =>{
                 <button onClick={spinButtonHandler} className={wheelStyles.wheelBtn}>Give me a key!</button>
             </div>
             <SongsExamples wheelKey={wheelKey} notes={notes}/>
+            <ChordDiagrams wheelKey={wheelKey} notes={notes}/>
         </div>
-
     </>
     )
 };

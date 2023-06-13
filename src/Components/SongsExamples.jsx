@@ -1,10 +1,10 @@
 import {Spotify} from "react-spotify-embed";
 import songsExamplesStyles from "./songsExamplesStyles.module.css";
-import {useCallback, useEffect, useState} from "react";
-import axios from "axios";
+
 
 // eslint-disable-next-line react/prop-types
 const SongsExamples = ({wheelKey, notes}) => {
+
 
 const keyExamples = [
     {key: "F", examples: [
@@ -42,12 +42,12 @@ const keyExamples = [
         "https://open.spotify.com/track/5oeOWXjH8NZFOWP0SpSXqV",
         "https://open.spotify.com/track/2wUlYDGGXlSvm2NkGj0Qio"
     ]},
-    {key: "F#", examples: [
+    {key: "Gb", examples: [
         "https://open.spotify.com/track/7KA4W4McWYRpgf0fWsJZWB",
         "https://open.spotify.com/track/7dVDWf0wud70V4PgYfKnaG",
         "https://open.spotify.com/track/2h1tUggJBTBYNbi2SqM4tK"
     ]},
-    {key: "C#", examples: [
+    {key: "Db", examples: [
         "https://open.spotify.com/track/5ZNdRdZ2inm4ksA8keadDs",
         "https://open.spotify.com/track/4Uiw0Sl9yskBaC6P4DcdVD",
         "https://open.spotify.com/track/2073QOEC8rBtSyTsRyaWiP"
@@ -69,26 +69,15 @@ const keyExamples = [
     ]}
 ];
 
-
-const chordDiagrams = useCallback (() =>{
-    axios.get(`https://api.uberchord.com/v1/chords/${wheelKey}`)
-    .then(res => {
-        console.log(res.data, "wheelkey: ", wheelKey);
-    })    
-}, [wheelKey]);
-
-
-useEffect(chordDiagrams,[chordDiagrams]);
-
-    for(let i = 0; i < keyExamples.length; i++){
-        if(wheelKey == keyExamples[i].key){
+    for(let j = 0; j < keyExamples.length; j++){
+        if(wheelKey == keyExamples[j].key){
             return(
                 <>
                     <div className={songsExamplesStyles.songList}>
                         <h2>Songs in this key</h2>
-                        <Spotify wide link={keyExamples[i].examples[0]}/>
-                        <Spotify wide link={keyExamples[i].examples[1]}/>
-                        <Spotify wide link={keyExamples[i].examples[2]}/>
+                        <Spotify wide link={keyExamples[j].examples[0]}/>
+                        <Spotify wide link={keyExamples[j].examples[1]}/>
+                        <Spotify wide link={keyExamples[j].examples[2]}/>
                         <div className={songsExamplesStyles.chordProgContainer}>
                             <h2>Chord progressions examples</h2>
                             <div className={songsExamplesStyles.chordProgList}>
@@ -111,8 +100,6 @@ useEffect(chordDiagrams,[chordDiagrams]);
             )
         }
     }
-
-    
 }
 
 export default SongsExamples;
