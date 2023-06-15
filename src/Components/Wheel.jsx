@@ -212,8 +212,10 @@ const Wheel = () =>{
             </div>
                 <button onClick={spinButtonHandler} className={wheelStyles.wheelBtn}>Give me a key!</button>
             </div>
-            <SongsExamples wheelKey={wheelKey} notes={notes}/>
-            <ChordDiagrams wheelKey={wheelKey} notes={notes}/>
+            <div className={wheelStyles.songsAndChordsContainer}>
+                <SongsExamples wheelKey={wheelKey} notes={notes}/>
+                <ChordDiagrams wheelKey={wheelKey} notes={notes}/>
+            </div>
         </div>
     </>
     )

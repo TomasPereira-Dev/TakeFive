@@ -1,39 +1,48 @@
-import {useState} from "react";
+import {useState, useCallback, useEffect} from "react";
 import chordDiagramsStyles from "./chordDiagramsStyles.module.css"
 
 const ChordDiagrams = ({wheelKey, notes}) => {
 
     const [chordsToRender, setChordsToRender] = useState(null);
+    const [test, setTest] = useState(null);
+
+    const chordArrLoop = useCallback(() =>{
+        let chords = null;
+        for(let i = 0; i < notes.length; i++){
+            if(wheelKey === notes[i].note){
+                chords = notes[i].notesInThisKey;
+            }else{
+                console.log("something went wrong: ", wheelKey, notes[i].note, i)
+            }
+        }
+        setChordsToRender(chords);
+    }, [wheelKey, notes])
+
+    const diagramMapping = useCallback(() => {
+        let mappedChords = null;
+        if(chordsToRender !== null){
+            mappedChords = chordsToRender.map((chord, index) =>  <iframe src={`https://api.uberchord.com/v1/embed/chords/${chord}#autosize-noicon`} className={chordDiagramsStyles.chordDiagramsIframe} key={index}/> )
+        }
+        setTest(mappedChords);
+    }, [chordsToRender]);
+
+    useEffect(()=>{
+        chordArrLoop()
+    }, [chordArrLoop])
+
+    useEffect(()=>{
+        diagramMapping()
+    },[diagramMapping])
     
-    let i = 0;
-    while(i < notes.length){
-        if(wheelKey === notes[i].note){
-            setChordsToRender(notes[i].notesInThisKey)
-            break;
-        }else{
-            i++;
-        }
 
-        if(chordsToRender){
-            break;
-        }
-    }
-
-    if(chordsToRender){
-        //UberChord embed content SDK spinnet
-        !function(e,r,d){var t,c=e.getElementsByTagName(r)[0];e.getElementById(d)||(t=e.createElement(r),t.id=d,t.src="https://uberchord-backend.firebaseapp.com/uberchord-embed-sdk.js",c.parentNode.insertBefore(t,c))}(document,"script","uberchord-jssdk");
-
-        return(
-        <div className={chordDiagramsStyles.chordDiagramsContainer}>
-            <h2>Chords in this key</h2>
-            <ul>
-                {
-                    chordsToRender.map((chord) => <li data-autosize="1" data-no-icon="1" className="uberchord-chord" data-chord-name={`${chord},,`} key={chord}/>)
-                }
-            </ul>
-        </div>
-        )
-    }   
+    return(
+    <div className={chordDiagramsStyles.chordDiagramsContainer}>
+        <h2>Chords in this key</h2>
+        <ul className={chordDiagramsStyles.chordDiagramsList}>
+           {test}
+        </ul>
+    </div>
+    )  
 }
 
 export default ChordDiagrams;

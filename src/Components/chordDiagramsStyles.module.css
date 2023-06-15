@@ -1,0 +1,18 @@
+.chordDiagramsContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.chordDiagramsList{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.chordDiagramsIframe{
+    box-sizing: border-box;
+    width: 5em;
+    height: 7em;
+    border: none;
+}
