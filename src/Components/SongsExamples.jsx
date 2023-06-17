@@ -75,9 +75,8 @@ const keyExamples = [
                 <>
                     <div className={songsExamplesStyles.songList}>
                         <h2>Songs in this key</h2>
-                        <Spotify wide link={keyExamples[j].examples[0]}/>
-                        <Spotify wide link={keyExamples[j].examples[1]}/>
-                        <Spotify wide link={keyExamples[j].examples[2]}/>
+                        <Spotify link={keyExamples[j].examples[0]}/>
+
                         <div className={songsExamplesStyles.chordProgContainer}>
                             <h2>Chord progressions examples</h2>
                             <div className={songsExamplesStyles.chordProgList}>

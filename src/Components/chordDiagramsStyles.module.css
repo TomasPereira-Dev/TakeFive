@@ -1,8 +1,12 @@
 .chordDiagramsContainer{
     display: flex;
+    padding: 1em;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #ffffff;
+    border-radius: 5%;
+    border-bottom: 5px solid #2878AE;
 }
 
 .chordDiagramsList{

@@ -1,9 +1,13 @@
 .songList{
     display: flex;
+    padding: 1em;
     flex-direction: column;
-    align-items: center;
+    text-align: center;
     gap: .5em;
     margin: 1em;
+    border-radius: 5%;
+    background-color: #FFFFFF;
+    border-bottom: 5px solid #2878AE;
 }
 
 .chordProgList{
@@ -11,11 +15,13 @@
     grid-template-columns: 1fr 1fr;
     flex-direction: column;
     gap: .5em;
+    
 }
 
 .chordProg{
-    background-color: #80A5A3;
+    background-color: #FFFFFF;
+    border: 1px solid #2878AE;
     text-align: center;
-    padding: 1em;
+    padding: .5em;
     border-radius: 1em;
 }
