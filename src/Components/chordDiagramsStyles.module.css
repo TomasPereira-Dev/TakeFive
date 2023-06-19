@@ -1,10 +1,21 @@
-.chordDiagramsContainer{
+.chordDiagramsWrapper{
     display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1em;
+}
+
+.chordDiagramsContainer{
+    
+    display: flex;
+    gap: 0.5em;
     padding: 1em;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #ffffff;
+    background-color: hsl(0, 0%, 97%);
     border-radius: 5%;
     border-bottom: 5px solid #2878AE;
 }
@@ -19,4 +30,22 @@
     width: 5em;
     height: 7em;
     border: none;
+}
+
+.logoContainer{
+    background-color: hsl(0, 0%, 97%);
+    border-radius: 5%;
+    padding: 1em;
+    border-bottom: 5px solid #2878AE;
+    text-align: center;
+}
+
+.logoContainer h1{
+    font-family: "bonodi moda", serif;
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+.logoContainer h2{
+    font-weight: 400;
 }

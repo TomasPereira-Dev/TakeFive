@@ -36,12 +36,18 @@ const ChordDiagrams = ({wheelKey, notes}) => {
     
 
     return(
-    <div className={chordDiagramsStyles.chordDiagramsContainer}>
-        <h2>Chords in this key</h2>
-        <ul className={chordDiagramsStyles.chordDiagramsList}>
-           {test}
-        </ul>
-    </div>
+        <div className={chordDiagramsStyles.chordDiagramsWrapper}>
+            <div className={chordDiagramsStyles.chordDiagramsContainer}>
+                <h2>Chords in this key</h2>
+                <ul className={chordDiagramsStyles.chordDiagramsList}>
+                   {test}
+                </ul>
+            </div>
+            <div className={chordDiagramsStyles.logoContainer}>
+               <h1>TakeFive</h1>
+               <h2>Music (theory) For The Masses</h2>
+            </div>
+        </div>
     )  
 }
 

@@ -81,8 +81,42 @@ const Wheel = () =>{
     <>
         <div className={wheelStyles.mainContainer}>
             <div className={wheelStyles.wheelWrapper}>
-                <div className={wheelStyles.arrowContainer}>
-                    <img src="..\src\assets\arrow.svg" alt="arrow" />
+                <div className={wheelStyles.noteNumberContainer}>
+                    <div className={wheelStyles.noteNumber}>
+                        <div className={wheelStyles.noteNumberText}>
+                            <p>IV</p>
+                        </div>
+                    </div>
+                    <div className={wheelStyles.noteNumber}>
+                        <div className={wheelStyles.noteNumberText}>
+                            <p>I</p>
+                        </div>
+                    </div>
+                    <div className={wheelStyles.noteNumber}>
+                        <div className={wheelStyles.noteNumberText}>
+                            <p>V</p>
+                        </div>
+                    </div>
+                    <div className={wheelStyles.noteNumber}>
+                        <div className={wheelStyles.noteNumberText}>
+                            <p>ii</p>
+                        </div>
+                    </div>
+                    <div className={wheelStyles.noteNumber}>
+                        <div className={wheelStyles.noteNumberText}>
+                            <p>vi</p>
+                        </div>
+                    </div>
+                    <div className={wheelStyles.noteNumber}>
+                        <div className={wheelStyles.noteNumberText}>
+                            <p>iii</p>
+                        </div>
+                    </div>
+                    <div className={wheelStyles.noteNumber}>
+                        <div className={wheelStyles.noteNumberText}>
+                            <p>viiº</p>
+                        </div>
+                    </div> 
                 </div>
                 <div className={wheelStyles.wheelContainer} ref={wheelRef}>
                     <div className={wheelStyles.majorKeys}>

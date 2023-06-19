@@ -3,7 +3,7 @@ import songsExamplesStyles from "./songsExamplesStyles.module.css";
 
 
 // eslint-disable-next-line react/prop-types
-const SongsExamples = ({wheelKey, notes}) => {
+const SongsExamples = ({wheelKey}) => {
 
 
 const keyExamples = [
@@ -13,7 +13,7 @@ const keyExamples = [
         "https://open.spotify.com/track/7wkgkIBYBH3xV2ob9Zmh87"
     ]},
     {key: "C", examples: [
-        "https://open.spotify.com/track/7lAK3oHbfEnvUQWosrMMpR",
+        "https://open.spotify.com/track/0T57cTUpYpvSvZ3GowBuTP?si=e910fff7d1ec4ef8",
         "https://open.spotify.com/track/7DfFc7a6Rwfi3YQMRbDMau",
         "https://open.spotify.com/track/3UoULw70kMsiVXxW0L3A33"
     ]},
