@@ -79,7 +79,7 @@ const Wheel = () =>{
 
     return(
     <>
-        <div className={wheelStyles.mainContainer}>
+    <div className={wheelStyles.mainContainer}>
             <div className={wheelStyles.wheelWrapper}>
                 <div className={wheelStyles.noteNumberContainer}>
                     <div className={wheelStyles.noteNumber}>
@@ -250,6 +250,7 @@ const Wheel = () =>{
                 <SongsExamples wheelKey={wheelKey} notes={notes}/>
                 <ChordDiagrams wheelKey={wheelKey} notes={notes}/>
             </div>
+
         </div>
     </>
     )

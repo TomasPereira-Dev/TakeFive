@@ -8,20 +8,20 @@
 }
 
 html, body{
+    background-color: #FDDF08;
     width: 100%;
     height: 100%;
-    background-color: #FDDF08;
     overflow: hidden;
 }
 
 .mainContainer{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
     height: 100%;
+    justify-content: center;
+    align-items: center;
     gap: 5em;
-    margin-top: 2em;
+    margin-top: 3em;
+    overflow: hidden;
 }
 
 .wheelWrapper{
@@ -35,13 +35,14 @@ html, body{
 .noteNumberContainer{
     position: absolute;
     background-color: #2878ae;
-    width: 734px;
-    height: 729px;
-    top: -4em;
+    width: 500px;
+    height: 500px;
     overflow: hidden;
     border-radius: 50%;
     border: 3px solid #2878ae;
-    transform: rotate(315deg);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -63%) rotate(315deg);
 }
 
 .noteNumberContainer .noteNumber{
@@ -78,8 +79,8 @@ html, body{
 
 .majorKeys{
     position: relative;
-    width: 600px;
-    height: 600px;
+    width: 400px;
+    height: 400px;
     overflow: hidden;
     border-radius: 50%;
     border: 3px solid #2878ae;
@@ -102,9 +103,8 @@ html, body{
 
 .minorKeys{
     position: absolute;
-    width: 350px;
-    height: 350px;
-    font-size: 1em;
+    width: 200px;
+    height: 200px;
     overflow: hidden;
     border-radius: 50%;
     border: 4px solid #2878ae;
@@ -119,11 +119,11 @@ html, body{
     height: 50%;
     overflow: hidden;
     border: 1px solid #2878ae;
-    padding: .5em;
 }
 
 .minorKeys .note .noteText{
     background-color: hsl(0, 10%, 95%);
+    font-size: .5em;
 }
 
 .wheelBtn{
