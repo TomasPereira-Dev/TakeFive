@@ -1,7 +1,6 @@
 .chordDiagramsWrapper{
     display: flex;
     flex-direction: column;
-    gap: 1em;
 }
 
 .chordDiagramsContainer{
@@ -34,6 +33,7 @@
     padding: 1em;
     border-bottom: 5px solid #2878AE;
     text-align: center;
+    margin-top: 2em;
 }
 
 .logoContainer h1{
@@ -44,4 +44,11 @@
 
 .logoContainer h2{
     font-weight: 400;
+}
+
+@media(max-width: 475px){
+    .chordDiagramsWrapper{
+        flex-direction: column-reverse;
+        gap: 1em;
+    }
 }
