@@ -24,8 +24,9 @@
     border-radius: 1em;
 }
 
-@media(max-width:475px){
-    .songList{
-        scale: 0.9;
+
+@media(min-width: 768px){
+    .songList iframe{
+       width: 14em;
     }
 }

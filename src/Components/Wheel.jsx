@@ -250,7 +250,6 @@ const Wheel = () =>{
                 <SongsExamples wheelKey={wheelKey} notes={notes}/>
                 <ChordDiagrams wheelKey={wheelKey} notes={notes}/>
             </div>
-
         </div>
     </>
     )

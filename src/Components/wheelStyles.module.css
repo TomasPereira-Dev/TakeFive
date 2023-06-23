@@ -337,36 +337,111 @@ body{
     transform: rotate(330deg) skewY(-60deg); 
 }
 
-@media(max-width: 475px){
+@media(max-width: 425px){
 
     .mainContainer{
         flex-direction: column;
         justify-content: space-evenly;
         height: 100%;
-        overflow-x: hidden;
         gap: 0;
     }
 
-    .wheelWrapper{
-        scale: 0.6;
+    .majorKeys{
+        width: 14.5em;
+        height: 14.5em;
+    }
+
+    .majorKeys p{
+        font-size: .8em;
+    }
+
+    .minorKeys{
+        width: 7.5em;
+        height: 7.5em;
+    }
+
+    .minorKeys p{
+        font-size: 1em;
+    }
+
+    .noteNumberContainer{
+        width: 20em;
+        height: 20em;
+        top: 44%;
+        left: 50%;
+    }
+
+    .noteText::after{
+        clip-path: circle(10%);
     }
 
     .songsAndChordsContainer{
         flex-direction: column-reverse;
         align-items: center;
         justify-content: center;
-        scale: 0.9;
     }
 }
 
-@media(width:768px){
+@media(max-width:768px){
+
     .mainContainer{
-        scale: 0.5;
+        flex-direction: column;
+        justify-content: flex-start;
     }
+
+    .majorKeys{
+        width: 14.5em;
+        height: 14.5em;
+    }
+
+    .majorKeys p{
+        font-size: .8em;
+    }
+
+    .minorKeys{
+        width: 7.5em;
+        height: 7.5em;
+    }
+
+    .minorKeys p{
+        font-size: 1em;
+    }
+
+    .noteNumberContainer{
+        width: 20em;
+        height: 20em;
+        top: 44%;
+        left: 50%;
+    }
+
+    .noteText::after{
+        clip-path: circle(10%);
+    }  
 }
 
-@media(width:1024px){
-        .mainContainer{
-        scale: 0.6;
+@media(min-width:1024px){
+    .majorKeys{
+        width: 20em;
+        height: 20em;
+    }
+
+    .majorKeys p{
+        font-size: .8em;
+    }
+
+    .minorKeys{
+        width: 10.5em;
+        height: 10.5em;
+    }
+
+    .minorKeys p{
+        font-size: 1em;
+    }
+
+    .noteNumberContainer{
+        width: 25em;
+        height: 25em;
+        top: 48%;
+        left: 50%;
     }
 }

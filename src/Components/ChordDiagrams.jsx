@@ -38,7 +38,7 @@ const ChordDiagrams = ({wheelKey, notes}) => {
     return(
         <div className={chordDiagramsStyles.chordDiagramsWrapper}>
             <div className={chordDiagramsStyles.chordDiagramsContainer}>
-                <h2>Chords in this key</h2>
+                <h2>Guitar chords in this key</h2>
                 <ul className={chordDiagramsStyles.chordDiagramsList}>
                    {test}
                 </ul>
